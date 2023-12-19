@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <main class="flex justify-center  ">
+    <div
+      class="w-screen sm:w-[500px] md:w-[500px] lg:w-[500px] xl:w-[500px] h-screen bg-black flex flex-col gap-10 justify-end py-5 ">
+      <div class="mx-5 ">
+        <input id="output-data"
+          class="bg-black w-full h-20 px-5 outline-none text-white rounded-md text-5xl font-medium" dir="rtl" value=""
+          type="text" readonly>
+      </div>
+      <div class="grid grid-cols-4 gap-5 mx-5 ">
+        <button onclick="clearDisplay()"
+          class="w-auto h-auto aspect-square bg-[#d1d1d1] text-2xl font-medium rounded-full  active:opacity-50 items text-3xl">AC</button>
+        <button onclick="appendToDisplay('/')"
+          class="w-auto h-auto aspect-square bg-[#d1d1d1] text-2xl font-medium rounded-full  active:opacity-50">+/-</button>
+        <button onclick="appendToDisplay('%')"
+          class="w-auto h-auto aspect-square bg-[#d1d1d1] text-2xl font-medium rounded-full  active:opacity-50">%</button>
+        <button onclick="appendToDisplay('/')"
+          class="w-auto h-auto aspect-square bg-[#ff8d02] text-white text-2xl rounded-full  active:opacity-50">/</button>
+        <button onclick="appendToDisplay('7')"
+          class="w-auto h-auto aspect-square text-white text-2xl bg-[#525252] rounded-full active:opacity-50 ">7</button>
+        <button onclick="appendToDisplay('8')"
+          class="w-auto h-auto aspect-square text-white text-2xl bg-[#525252] rounded-full active:opacity-50">8</button>
+        <button onclick="appendToDisplay('9')"
+          class="w-auto h-auto aspect-square text-white text-2xl bg-[#525252] rounded-full active:opacity-50">9</button>
+        <button onclick="appendToDisplay('*')"
+          class="w-auto h-auto aspect-square bg-[#ff8d02] text-white text-2xl rounded-full  active:opacity-50">*</button>
+        <button onclick="appendToDisplay('4')"
+          class="w-auto h-auto aspect-square  text-2xl text-white bg-[#525252] rounded-full active:opacity-50 ">4</button>
+        <button onclick="appendToDisplay('5')"
+          class="w-auto h-auto aspect-square  text-2xl text-white bg-[#525252] rounded-full active:opacity-50">5</button>
+        <button onclick="appendToDisplay('6')"
+          class="w-auto h-auto aspect-square text-white  text-2xl bg-[#525252] rounded-full active:opacity-50">6</button>
+        <button onclick="appendToDisplay('-')"
+          class="w-auto h-auto aspect-square bg-[#ff8d02] text-white text-2xl rounded-full  active:opacity-50">-</button>
+        <button onclick="appendToDisplay('1')"
+          class="w-auto h-auto aspect-square  text-2xl text-white bg-[#525252] rounded-full active:opacity-50 ">1</button>
+        <button onclick="appendToDisplay('2')"
+          class="w-auto h-auto aspect-square  text-2xl text-white bg-[#525252] rounded-full active:opacity-50">2</button>
+        <button onclick="appendToDisplay('3')"
+          class="w-auto h-auto aspect-square  text-2xl text-white bg-[#525252] rounded-full active:opacity-50">3</button>
+        <button onclick="appendToDisplay('+')"
+          class="w-auto h-auto aspect-square bg-[#ff8d02] text-white text-2xl rounded-full  active:opacity-50">+</button>
+
+        <button onclick="appendToDisplay('0')"
+          class="bg-[#525252]  col-span-2 text-white text-2xl rounded-full active:opacity-50 flex justify-center items-center">0</button>
+        <button onclick="appendToDisplay('.')"
+          class=" w-auto h-auto aspect-square text-2xl text-white bg-[#525252] rounded-full flex justify-center items-center   active:opacity-50">.</button>
+
+        <button onclick="calculateResult()"
+          class="w-auto h-auto bg-[#ff8d02] text-white text-2xl rounded-full  active:opacity-50">=</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    var outputElement = document.getElementById("output-data");
+    outputElement.value = "0";
+    function appendToDisplay(value) {
+      if (outputElement.value === '0') {
+        outputElement.value = "";
+      }
+      document.getElementById('output-data').value += value;
+    }
+
+    function clearDisplay() {
+      document.getElementById('output-data').value = '0';
+    }
+
+    function calculateResult() {
+      var result = eval(document.getElementById('output-data').value);
+      document.getElementById('output-data').value = result;
+    }
+  </script>
+</body>
+
+</html>
