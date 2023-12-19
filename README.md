@@ -1,19 +1,6 @@
-# iOS CALCULATOR DESIGN WITH FUNCTIONALITY
+# iOS Calculator Design with functionality
 A brief description of your awesome project.
 
-[![Build Status](https://img.shields.io/travis/yourusername/your-repository/master.svg)](https://travis-ci.org/yourusername/your-repository)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+# Link
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Installation
-
-1. Clone the repository.
-   ```bash
-
-   git clone https://github.com/yourusername/your-repository.git
+Please visit the [calculator](https://www.google.com/) for more details.
